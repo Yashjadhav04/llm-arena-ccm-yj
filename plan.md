@@ -90,26 +90,34 @@ Tasks:
 This stage matters because the TA feedback suggests that bias structure may differ across task classes.
 
 ### Phase 3: Feature construction
-Construct interpretable features that reflect plausible cognitive biases or controls.
+Construct interpretable observable features that may reflect latent evaluation heuristics or serve as control variables. The key idea is to avoid treating response length, side position, or task type as cognitive variables themselves. Instead, they will be modeled as surface cues or contextual moderators that may correlate with hidden judgment tendencies.
 
-Core features:
-- Response length measures
+Core observable cues and moderators:
+- Relative response length proxies
   - token count
   - character count
   - length ratio or length difference
-- Position/order indicator
-- Prompt type or task category
-- Style and explainability features
+  - interpreted as possible correlates of verbosity, completeness, effort, or informativeness heuristics
+- Response position and presentation cues
+  - side A versus side B indicator
+  - evaluation order when available
+  - interpreted as possible correlates of primacy effects, side preference, or attention asymmetry
+- Task-context moderators
+  - prompt type or task category
+  - interactions such as length by task type or position by task type
+  - used to test whether people rely on different evaluation heuristics in creative, factual, reasoning, or code tasks
+- Style and explainability cues
   - n-grams
   - conjunctions or feature combinations
   - sequential information if conversation structure is available
+  - interpreted as proxies for perceived clarity, confidence, structure, or informativeness
 
 Control features:
 - Readability or coherence proxies
 - Safety or obvious failure indicators
 - Topic or prompt-difficulty proxies where possible
 
-The goal is not just prediction. The features should be interpretable enough to support a cognitive explanation of voting behavior.
+The goal is not just prediction. The features should be interpretable enough to support claims of the form: votes change in systematic ways when an observable cue changes, which is consistent with a latent evaluation heuristic. Model identity terms will capture latent quality, while cue terms will estimate how votes shift with measurable surface characteristics.
 
 ### Phase 4: Baseline model
 Fit a baseline pairwise preference model, such as Bradley-Terry or logistic pairwise regression using model identity alone.

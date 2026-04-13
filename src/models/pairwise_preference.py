@@ -13,6 +13,7 @@ class PairwisePreferenceResult:
     model_scores: pd.DataFrame
     coefficients: pd.DataFrame
     metrics: dict[str, float]
+    feature_columns: list[str]
 
 
 def fit_pairwise_logit(
@@ -141,4 +142,87 @@ def fit_pairwise_logit(
         model_scores=scores,
         coefficients=coefficients,
         metrics=metrics,
+        feature_columns=feature_columns,
     )
+
+
+def predict_pairwise_logit(
+    frame: pd.DataFrame,
+    result: PairwisePreferenceResult,
+) -> pd.DataFrame:
+    feature_columns = result.feature_columns
+    required = ["model_a", "model_b", *feature_columns]
+    data = frame[required].copy()
+
+    score_map = result.model_scores.set_index("model")["score"]
+    known_model_a = data["model_a"].isin(score_map.index)
+    known_model_b = data["model_b"].isin(score_map.index)
+
+    skill_a = data["model_a"].map(score_map).fillna(0.0).to_numpy(dtype=float)
+    skill_b = data["model_b"].map(score_map).fillna(0.0).to_numpy(dtype=float)
+    eta = skill_a - skill_b
+
+    if feature_columns:
+        coeff_map = result.coefficients.set_index("term")["estimate"]
+        betas = coeff_map.reindex(feature_columns).fillna(0.0).to_numpy(dtype=float)
+        x = data[feature_columns].to_numpy(dtype=float)
+        eta += x @ betas
+
+    probs = expit(eta)
+    return pd.DataFrame(
+        {
+            "pred_proba": probs,
+            "pred_label": (probs >= 0.5).astype(float),
+            "known_model_a": known_model_a.to_numpy(),
+            "known_model_b": known_model_b.to_numpy(),
+            "known_pair": (known_model_a & known_model_b).to_numpy(),
+        },
+        index=frame.index,
+    )
+
+
+def evaluate_pairwise_logit(
+    frame: pd.DataFrame,
+    result: PairwisePreferenceResult,
+    unknown_policy: str = "drop",
+) -> dict[str, float]:
+    if unknown_policy not in {"drop", "keep", "error"}:
+        raise ValueError("unknown_policy must be one of: drop, keep, error")
+
+    predictions = predict_pairwise_logit(frame, result)
+    y = pd.to_numeric(frame["winner_binary"], errors="coerce").to_numpy(dtype=float)
+    mask = ~np.isnan(y)
+
+    if unknown_policy == "drop":
+        mask &= predictions["known_pair"].to_numpy(dtype=bool)
+    elif unknown_policy == "error" and not predictions.loc[mask, "known_pair"].all():
+        raise ValueError("Encountered evaluation rows with models not seen during fitting.")
+
+    y_eval = y[mask]
+    probs = predictions.loc[mask, "pred_proba"].to_numpy(dtype=float)
+    preds = predictions.loc[mask, "pred_label"].to_numpy(dtype=float)
+
+    if len(y_eval) == 0:
+        raise ValueError("No valid rows remained for evaluation.")
+
+    eps = 1e-9
+    base_rate = float(y_eval.mean())
+    null_probs = np.full(len(y_eval), base_rate, dtype=float)
+
+    return {
+        "n_rows": float(len(y_eval)),
+        "accuracy": float(np.mean(preds == y_eval)),
+        "log_loss": float(
+            -np.mean(y_eval * np.log(probs + eps) + (1 - y_eval) * np.log(1 - probs + eps))
+        ),
+        "brier_score": float(np.mean((probs - y_eval) ** 2)),
+        "null_log_loss": float(
+            -np.mean(
+                y_eval * np.log(null_probs + eps)
+                + (1 - y_eval) * np.log(1 - null_probs + eps)
+            )
+        ),
+        "mean_model_a_win_rate": base_rate,
+        "covered_row_share": float(mask.mean()),
+        "unknown_pair_rows": float((~predictions.loc[~np.isnan(y), "known_pair"]).sum()),
+    }

@@ -1,0 +1,9 @@
+{
+  "split_source": "generated in this run",
+  "processed_parquet": "/Users/maingoclanvy/ccm/data/processed/arena_full_features.parquet",
+  "limit": null,
+  "train_share": 0.8,
+  "validation_share": 0.1,
+  "seed": 7,
+  "n_binary_rows": 98348
+}
