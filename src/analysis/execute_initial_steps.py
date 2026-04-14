@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 
 from src.models.pairwise_preference import fit_pairwise_logit
-from src.utils.arena_dataset import binary_vote_frame, flatten_initial_features, load_arena_raw
+from src.utils.arena_dataset import add_formatting_features, binary_vote_frame, flatten_initial_features, load_arena_raw
 
 
 def _format_top_counts(series: pd.Series, top_n: int = 5) -> list[str]:
@@ -199,6 +199,7 @@ def main() -> None:
         prefer_local=args.prefer_local,
     )
     flat = flatten_initial_features(raw)
+    flat = add_formatting_features(flat, raw)  # adds fmt_diff_* columns
     binary = binary_vote_frame(flat)
 
     processed_path = (repo_root / args.processed_parquet).resolve()
@@ -208,7 +209,8 @@ def main() -> None:
     baseline = fit_pairwise_logit(binary)
     bias_model = fit_pairwise_logit(
         binary,
-        feature_columns=["side_a_bias", "length_diff_z"],
+        feature_columns=["side_a_bias", "length_diff_z",
+                         "fmt_diff_has_markdown"],
     )
     task_results = _task_specific_length_results(binary)
 

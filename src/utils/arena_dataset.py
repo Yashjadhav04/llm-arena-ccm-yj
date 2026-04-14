@@ -20,6 +20,8 @@ RAW_COLUMNS = [
     "language",
     "is_code",
     "timestamp",
+    "conversation_a",
+    "conversation_b",
 ]
 
 
@@ -215,6 +217,58 @@ def flatten_initial_features(raw: pd.DataFrame) -> pd.DataFrame:
         flat["length_diff_z"] = (flat["length_diff_tokens"] - mean_diff) / std_diff
 
     flat["side_a_bias"] = 1.0
+    return flat
+
+
+def _count_markdown_features(text: str) -> dict[str, int]:
+    """Count surface markdown cues as proxies for a structure/fluency heuristic.
+
+    These are observable surface statistics, not cognitive variables themselves.
+    A voter who prefers a bulleted response may be responding to a latent
+    structure heuristic; the bullet count is only the measurable correlate.
+    """
+    if not isinstance(text, str):
+        return {"n_headers": 0, "n_bullets": 0, "n_bold": 0, "n_code_blocks": 0}
+    return {
+        "n_headers": text.count("\n#") + int(text.startswith("#")),
+        "n_bullets": text.count("\n- ") + text.count("\n* "),
+        "n_bold": text.count("**") // 2,
+        "n_code_blocks": text.count("```") // 2,
+    }
+
+
+def add_formatting_features(flat: pd.DataFrame, raw: pd.DataFrame) -> pd.DataFrame:
+    """Append markdown formatting features for responses A and B.
+
+    Requires the raw frame to access conversation text. Adds per-response
+    counts and a signed difference (A minus B) for each cue, which is the
+    form used as a covariate in the pairwise logit model.
+    """
+    def extract_last_assistant_turn(conv: Any, role_key: str = "content") -> str:
+        if not isinstance(conv, list):
+            return ""
+        assistant_turns = [
+            m.get(role_key, "") for m in conv
+            if isinstance(m, dict) and m.get("role") == "assistant"
+        ]
+        return assistant_turns[-1] if assistant_turns else ""
+
+    texts_a = raw["conversation_a"].apply(extract_last_assistant_turn) if "conversation_a" in raw.columns else pd.Series([""] * len(raw))
+    texts_b = raw["conversation_b"].apply(extract_last_assistant_turn) if "conversation_b" in raw.columns else pd.Series([""] * len(raw))
+
+    feats_a = texts_a.apply(_count_markdown_features).apply(pd.Series).add_prefix("a_")
+    feats_b = texts_b.apply(_count_markdown_features).apply(pd.Series).add_prefix("b_")
+
+    flat = pd.concat([flat.reset_index(drop=True), feats_a.reset_index(drop=True), feats_b.reset_index(drop=True)], axis=1)
+
+    for cue in ["n_headers", "n_bullets", "n_bold", "n_code_blocks"]:
+        flat[f"fmt_diff_{cue}"] = flat[f"a_{cue}"] - flat[f"b_{cue}"]
+
+    # Binary: did A use any markdown at all vs B?
+    flat["a_has_markdown"] = (flat[["a_n_headers", "a_n_bullets", "a_n_bold", "a_n_code_blocks"]].sum(axis=1) > 0).astype(float)
+    flat["b_has_markdown"] = (flat[["b_n_headers", "b_n_bullets", "b_n_bold", "b_n_code_blocks"]].sum(axis=1) > 0).astype(float)
+    flat["fmt_diff_has_markdown"] = flat["a_has_markdown"] - flat["b_has_markdown"]
+
     return flat
 
 
