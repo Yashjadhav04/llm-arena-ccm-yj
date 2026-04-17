@@ -1,0 +1,19 @@
+# Cognitive Construct Mappings: Surface Statistics vs. Latent Variables
+
+For each covariate in our model, we distinguish the observable surface statistic from the latent cognitive variable it proxies. The coefficients estimate how much votes shift when the surface cue shifts, not the cognitive bias directly. The latent bias is inferred from the fact that these surface features predict preference above and beyond model identity.
+
+## Verbosity Heuristic (proxied by standardized token difference)
+
+The token count difference between responses A and B is an observable surface statistic. The latent cognitive variable it proxies is a verbosity heuristic: voters infer that a longer response reflects greater effort, thoroughness, or competence, independent of whether the additional length contains substantively better content. In our data, the longer response wins 61.2% of decisive votes, with a monotonic gradient across token difference bins. The estimated coefficient of 0.158 (after controlling for formatting) confirms that raw length retains independent predictive power, but roughly half of the naive verbosity effect (0.293 in the proxy-only model) is absorbed by formatting covariates, suggesting that what appears as a pure length preference partly reflects a preference for structured, formatted output.
+
+## Position Bias (proxied by side A indicator)
+
+The binary indicator for whether a response appeared in position A is an observable surface statistic. The latent cognitive variable it could proxy is a primacy or recency effect: voters may systematically favor whichever response they read first (or last). The estimated coefficient is near zero across all model specifications (approximately negative 0.027), indicating that position bias is not a meaningful source of distortion in this dataset. This null finding is itself informative: it suggests the Chatbot Arena interface effectively mitigates serial order effects, possibly because voters can freely scroll between responses rather than viewing them sequentially.
+
+## Perceived Structure Heuristic (proxied by markdown formatting differences)
+
+The counts of markdown headers, bullet lists, bold text, and code blocks in each response are observable surface statistics. The latent cognitive variable they proxy is a perceived organization heuristic: voters infer that a response using visible structural markers is more thoughtful or authoritative, independent of whether the underlying content is actually better organized. The binary formatting indicator (whether A used any markdown and B did not) yields a coefficient of 0.299, comparable in magnitude to the full verbosity effect. When decomposed into individual cues, code blocks carry the strongest independent signal (0.035 per unit difference), followed by headers (0.011) and bold (0.010), while bullet points contribute near zero (0.001). The fact that controlling for these cues halves the length coefficient suggests that voters responding to "longer" responses are partly responding to the structural formatting that tends to accompany longer output.
+
+## Task Dependent Heuristic Weighting (proxied by category tags)
+
+The prompt category (creative writing, math, instruction following, code) is an observable surface statistic. The latent cognitive variable it proxies is the idea that the weight a judge gives to surface heuristics varies with the perceived verifiability of the task. For tasks where output quality is difficult to assess independently (creative writing, open ended advice), judges should rely more on surface cues because they lack an internal standard of correctness. For tasks where quality is more verifiable (math, code), judges should rely less on surface cues and more on outcome level assessment. This construct has not yet been fitted as an interaction term in the model but is supported descriptively by the EDA showing verbosity bias is slightly stronger in non-code, non-math prompts.
