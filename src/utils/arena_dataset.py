@@ -89,7 +89,46 @@ def load_arena_raw(
         "shards under data/raw/."
     )
 
-# double check the actual domains through EDA -> precise buckets
+
+def to_message_list(value: Any) -> list[Any]:
+    if isinstance(value, list):
+        return value
+    if isinstance(value, np.ndarray):
+        return value.tolist()
+    return []
+
+
+def content_to_text(content: Any) -> str:
+    if isinstance(content, str):
+        return content
+    texts: list[str] = []
+    for block in to_message_list(content):
+        if isinstance(block, dict):
+            if block.get("type") == "text" and "text" in block:
+                texts.append(str(block.get("text", "")))
+            elif "text" in block:
+                texts.append(str(block.get("text", "")))
+    return " ".join(text for text in texts if text)
+
+
+def extract_first_user_prompt(conv: Any) -> str:
+    for turn in to_message_list(conv):
+        if isinstance(turn, dict) and turn.get("role") == "user":
+            text = content_to_text(turn.get("content", ""))
+            if text.strip():
+                return text.strip()
+    return ""
+
+
+def extract_last_assistant_turn(conv: Any, role_key: str = "content") -> str:
+    assistant_turns = [
+        content_to_text(message.get(role_key, ""))
+        for message in to_message_list(conv)
+        if isinstance(message, dict) and message.get("role") == "assistant"
+    ]
+    return assistant_turns[-1] if assistant_turns else ""
+
+
 def derive_task_bucket(row: pd.Series) -> str:
     creative_signal = bool(row["creative_writing"] or row["criteria_creativity"])
     factual_signal = bool(
@@ -244,29 +283,36 @@ def add_formatting_features(flat: pd.DataFrame, raw: pd.DataFrame) -> pd.DataFra
     counts and a signed difference (A minus B) for each cue, which is the
     form used as a covariate in the pairwise logit model.
     """
-    def extract_last_assistant_turn(conv: Any, role_key: str = "content") -> str:
-        if not isinstance(conv, list):
-            return ""
-        assistant_turns = [
-            m.get(role_key, "") for m in conv
-            if isinstance(m, dict) and m.get("role") == "assistant"
-        ]
-        return assistant_turns[-1] if assistant_turns else ""
+    if "conversation_a" in raw.columns:
+        texts_a = raw["conversation_a"].apply(extract_last_assistant_turn)
+    else:
+        texts_a = pd.Series([""] * len(raw))
 
-    texts_a = raw["conversation_a"].apply(extract_last_assistant_turn) if "conversation_a" in raw.columns else pd.Series([""] * len(raw))
-    texts_b = raw["conversation_b"].apply(extract_last_assistant_turn) if "conversation_b" in raw.columns else pd.Series([""] * len(raw))
+    if "conversation_b" in raw.columns:
+        texts_b = raw["conversation_b"].apply(extract_last_assistant_turn)
+    else:
+        texts_b = pd.Series([""] * len(raw))
 
     feats_a = texts_a.apply(_count_markdown_features).apply(pd.Series).add_prefix("a_")
     feats_b = texts_b.apply(_count_markdown_features).apply(pd.Series).add_prefix("b_")
 
-    flat = pd.concat([flat.reset_index(drop=True), feats_a.reset_index(drop=True), feats_b.reset_index(drop=True)], axis=1)
+    flat = pd.concat(
+        [
+            flat.reset_index(drop=True),
+            feats_a.reset_index(drop=True),
+            feats_b.reset_index(drop=True),
+        ],
+        axis=1,
+    )
 
     for cue in ["n_headers", "n_bullets", "n_bold", "n_code_blocks"]:
         flat[f"fmt_diff_{cue}"] = flat[f"a_{cue}"] - flat[f"b_{cue}"]
 
     # Binary: did A use any markdown at all vs B?
-    flat["a_has_markdown"] = (flat[["a_n_headers", "a_n_bullets", "a_n_bold", "a_n_code_blocks"]].sum(axis=1) > 0).astype(float)
-    flat["b_has_markdown"] = (flat[["b_n_headers", "b_n_bullets", "b_n_bold", "b_n_code_blocks"]].sum(axis=1) > 0).astype(float)
+    markdown_cols_a = ["a_n_headers", "a_n_bullets", "a_n_bold", "a_n_code_blocks"]
+    markdown_cols_b = ["b_n_headers", "b_n_bullets", "b_n_bold", "b_n_code_blocks"]
+    flat["a_has_markdown"] = (flat[markdown_cols_a].sum(axis=1) > 0).astype(float)
+    flat["b_has_markdown"] = (flat[markdown_cols_b].sum(axis=1) > 0).astype(float)
     flat["fmt_diff_has_markdown"] = flat["a_has_markdown"] - flat["b_has_markdown"]
 
     return flat

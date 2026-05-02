@@ -258,8 +258,13 @@ The cleanest narrative is:
 5. Removing those bias terms changes the resulting leaderboard and changes how we interpret LLM evaluation.
 
 ## Immediate Next Steps
-1. Confirm the exact fields available in the Arena dataset.
-2. Decide on the first task split, ideally creative versus factual/reasoning.
-3. Implement a baseline Bradley-Terry style analysis.
-4. Add the first bias terms: length and position.
-5. Use those initial results to shape the final paper and decide whether the optional experiment is worth adding.
+
+1. Use `full_formatting` as the main final model in the write-up, because it has the strongest held-out log-loss performance and passes the focused synthetic validation run.
+2. Present `signal_interactions` as an explanatory sensitivity analysis: task context changes implied length/formatting slopes, but it does not beat `full_formatting` on calibrated test log loss.
+3. Decide whether the optional LLM-as-a-Judge comparison is still in scope. It remains the main unimplemented item from the original plan.
+4. Convert the current result summaries into final paper figures/tables, especially:
+   - baseline versus full-formatting metrics,
+   - formatting and length coefficients,
+   - session-bootstrap uncertainty intervals,
+   - final-model validation results.
+5. Make an artifact policy before committing: keep polished final outputs, archive old exploratory outputs, and leave smoke/rerun folders untracked unless they support the final paper.

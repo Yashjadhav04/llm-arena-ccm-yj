@@ -208,3 +208,8 @@ __marimo__/
 
 # Project result caches
 results/**/formatting_features_cache.parquet
+results/*smoke*/
+results/first 5k row/
+results/model_validation/
+results/model_validation_rerun/
+results/with_formatting/

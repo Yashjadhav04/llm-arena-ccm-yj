@@ -1,0 +1,9 @@
+other_subtype,count,share_within_other
+none,6878,0.9768498792785115
+specificity,69,0.0097997443544951
+complexity+specificity,45,0.006391137622496805
+complexity+real_world,14,0.0019883539269990058
+complexity,13,0.0018463286464990769
+real_world,13,0.0018463286464990769
+complexity+specificity+real_world,6,0.0008521516829995739
+specificity+real_world,3,0.00042607584149978694

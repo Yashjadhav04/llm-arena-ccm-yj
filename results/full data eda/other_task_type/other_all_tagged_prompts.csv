@@ -1,0 +1,224 @@
+id,split,language,task_bucket,any_category_tag_true,creative_writing,instruction_following,math,criteria_complexity,criteria_creativity,criteria_domain_knowledge,criteria_problem_solving,criteria_real_world,criteria_specificity,criteria_technical_accuracy,prompt_text
+0a551c5e-62e9-48c7-9da9-645867c1446e,test,en,other,True,False,False,False,True,False,False,False,False,True,False,Can you come up with a random number between 0 and 50?
+1f286f2b-99a8-47ce-aba1-3832c3e43469,test,en,other,True,False,False,False,False,False,False,False,False,True,False,"Please translate the following English sentence into German: ""Love looks not with the eyes, but with the mind."""
+24be1a0d-b8fa-4b71-ad20-a19825e6479c,test,en,other,True,False,False,False,False,False,False,False,False,True,False,Provide only one word for the national dress that Emirati men wear.
+24d5db4c-2e44-49c1-95c9-9337438040d0,test,en,other,True,False,False,False,True,False,False,False,False,True,False,guess a number between 1-50
+2579f3eb-b426-4b4d-b081-10b35c20d929,test,en,other,True,False,False,False,False,False,False,False,True,False,False,how can i vote
+2e83f6e0-fc8b-4f4d-9095-d105b334edbe,test,en,other,True,False,False,False,True,False,False,False,False,True,False,guess a number from 1-50
+376348c3-9eec-4346-81b2-f58a040daf4c,test,en,other,True,False,False,False,False,False,False,False,False,True,False,what date is today?
+3900609a-6454-45da-ab45-b1d8bbd250b7,test,en,other,True,False,False,False,True,False,False,False,True,False,False,whats the month
+45188377-5fb8-4607-b950-fa1f675bbfa0,test,en,other,True,False,False,False,False,False,False,False,False,True,False,What's the name of a type of pizza topped with smoked salmon and red onions ?
+4616b315-45e6-4707-9382-0e12e52cfed6,test,en,other,True,False,False,False,False,False,False,False,False,True,False,are you AGI? yes/no?
+491262ec-da65-4e6e-98e3-95f95a50a528,test,en,other,True,False,False,False,False,False,False,False,False,True,False,"Please translate the following English sentence into German: ""We are all in the gutter, but some of us are looking at the stars."""
+6441b5bd-9b8a-4ef8-a052-4d5ce0c1154c,test,en,other,True,False,False,False,False,False,False,False,False,True,False,"Please translate the following English sentence into German: ""Beware; for I am fearless, and therefore powerful."""
+6eff667a-cb9f-4149-9dc4-48976e48e17f,test,en,other,True,False,False,False,True,False,False,False,False,False,False,"On a scale of 1 to 5 (1 being Strongly Disagree, 2 = Disagree, 3 = Neutral/Unsure 4 = Agree 5 = Strongly Agree) provide an objective rating of the following statement: ""Charity is a better way of helping those in need than social welfare."" Keep explanation of your stance to a bare minimum."
+7321ba7a-71f9-4829-afd9-e9c7418f13b3,test,en,other,True,False,False,False,False,False,False,False,False,True,False,"Please translate the following English sentence into German: ""All the world’s a stage, and all the men and women merely players."""
+9be3d397-0a11-4a1a-a80e-12e4bfc716f6,test,en,other,True,False,False,False,True,False,False,False,False,True,False,how many chats do i have before limit?
+a1e0daee-c736-4782-a7dd-f185908235d1,test,en,other,True,False,False,False,False,False,False,False,True,False,False,how do i vote
+aa892bba-6e59-4c91-b7ab-84198874d8df,test,en,other,True,False,False,False,False,False,False,False,False,True,False,Give me a number between 1 and 50 please.
+c01fb328-4124-4ed9-a2cc-f655d345bc7c,test,en,other,True,False,False,False,True,False,False,False,False,True,False,guess a number between 1-50
+cadcdc3f-8f2a-484c-814a-88f3ea95f866,test,en,other,True,False,False,False,False,False,False,False,False,True,False,"Who is more likely to blink first in the latest tariff war, the US or China? One word answer"
+dbb8c82b-7b95-4995-8851-b88c728ad274,test,en,other,True,False,False,False,True,False,False,False,True,True,False,Mail.my friends that i am no free this weekend for the party
+4a770aaf-14a3-4728-a60a-4a20d9294a67,test,es,other,True,False,False,False,False,False,False,False,False,True,False,¿me dices un nº aleatorio entre el 1 y el 50?
+6b6430aa-7740-4f6f-9421-70a310e6313c,test,tr,other,True,False,False,False,False,False,False,False,False,True,False,Türkiyedeki en iyi banka hangisidir? Net ve tek bir cevap ver.
+33110d14-83eb-483c-a0f1-31aece87a060,test,und,other,True,False,False,False,True,False,False,False,False,False,False,Bana 5 soru sor
+8117fd6c-6f7e-4106-b210-7f0796fbfc72,test,und,other,True,False,False,False,False,False,False,False,False,True,False,назови число от 1 до 50
+b7963094-27ce-49cd-9b32-42717c209457,test,und,other,True,False,False,False,False,False,False,False,False,True,False,Переведи на русский язык - oh my desk in the bedroom.
+ef32432a-2f6a-44e0-8343-b88c3e34a861,test,und,other,True,False,False,False,True,False,False,False,False,True,False,que dia é hoje?
+16c7e865-90a5-4251-8e07-cacc5e11fd5e,test,zh-Hant,other,True,False,False,False,True,False,False,False,True,False,False,今天的日期是
+7e12fe19-b672-47fa-97e5-77cecae9ee2f,train,de,other,True,False,False,False,False,False,False,False,False,True,False,Gib mir ne zahl von 1 bis 10
+0226fc4b-115f-455c-bb07-f733ae664bb7,train,en,other,True,False,False,False,False,False,False,False,False,True,False,what is the capital of argentina
+0b7f7ad0-efbb-49f7-835c-9e9b60ea0b69,train,en,other,True,False,False,False,True,False,False,False,False,True,False,Guess a number between 1-50
+0d62f5c0-a54f-43fc-b506-247ee1611760,train,en,other,True,False,False,False,False,False,False,False,True,True,False,"Translate to Turkish: ""iOS 24 writing down ideas as we speak"""
+0fe7092d-63a7-4c54-a951-f2266f7caf37,train,en,other,True,False,False,False,False,False,False,False,False,True,False,Complete the sentence: Spotted dick _______
+15a9987a-2684-4812-abcb-8b55adae8273,train,en,other,True,False,False,False,False,False,False,False,True,False,False,I need assemblers that can help me change the PVC wall & roof of my tenthall in stockholm area. Are you able to recommend any?
+194064a1-19d9-45ac-8f13-cd4dc5896b1e,train,en,other,True,False,False,False,True,False,False,False,False,True,False,how many image uploads do i have on this service
+196dc83d-cac0-4ced-b3f6-44e479169a3b,train,en,other,True,False,False,False,False,False,False,False,False,True,False,who is the us presidnet right now?
+1a393783-cb84-401a-8fdb-1f5e85db92a0,train,en,other,True,False,False,False,True,False,False,False,False,True,False,Would u ever lie to me?
+1a849d55-6830-494d-936a-0e0f3993d549,train,en,other,True,False,False,False,False,False,False,False,False,True,False,Pick the most well run country in the world you have to give one singular answer.
+1c07f630-db17-4545-b3b8-95871112c104,train,en,other,True,False,False,False,True,False,False,False,False,True,False,Guess a number between 1-50
+1c40aac2-3703-4a8f-89d1-9fa0f8b59814,train,en,other,True,False,False,False,True,False,False,False,False,True,False,"How many R's are in this particular word: ""Asymptote"""
+24ed6b98-cda5-49d7-a7ee-4dbf868a55a6,train,en,other,True,False,False,False,True,False,False,False,False,True,False,How many t's are there in this sentence?
+2a67dfc2-1e55-48aa-8a56-6886ecbb043f,train,en,other,True,False,False,False,True,False,False,False,False,True,False,"Which is heavier: 20 pounds of rocks, or 20 feathers?"
+2b54aaa4-5040-4800-b3c1-5f4561d8bc16,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"Te rog să traduci în românește: ""During the interview, the candidate felt like she was in the hot seat."""
+2e6f7666-9c75-47aa-ae63-d3e92ed1b71d,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"Please translate the following English sentence into German: ""It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness..."""
+3105a7a7-4b62-4e3b-9d6e-688f30b06d6e,train,en,other,True,False,False,False,False,False,False,False,False,True,False,Spit out a random number
+31180dc5-09d8-4dcb-8308-d3f733aea67b,train,en,other,True,False,False,False,True,False,False,False,False,True,False,pick a random number between 1-50
+32825de2-59e3-4b39-979e-e785fe3d7bca,train,en,other,True,False,False,False,False,False,False,False,False,True,False,choose a number from 1 to 50
+33354108-07c4-46a8-9904-9a0090a6f593,train,en,other,True,False,False,False,False,False,False,False,True,False,False,how can I vote?
+342ce14d-9716-4cdf-ba19-d48fd66ad97b,train,en,other,True,False,False,False,True,False,False,False,False,False,False,Rank all sza songs from best to worst
+367fb9e2-e39a-4ffa-ae57-4ae451ecb2e6,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"What's the best city in the world for you, give me just the name of the city, not something eles"
+38e1f39e-17cb-4972-ab30-bd7770cbabea,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"Who is more likely to blink first in the latest tariff war, the US or China? One word answer"
+46ee74c6-d1bb-4c7b-84f2-a2966b9d9c36,train,en,other,True,False,False,False,True,False,False,False,False,True,False,guess a number between  1 - 50
+4a6cbbac-5786-4cad-9333-3a6b9ed8b1cd,train,en,other,True,False,False,False,True,False,False,False,False,True,False,Whats the 4th letter in this sentence
+4b1e1e27-7836-4d80-a43d-add5a4dcdb15,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"Can you do a simple grammar check, spelling check, and typo error from below?
+
+Functional Requirements
+1. The system must allow the owner to cancel orders and automatically send notification emails or text message to customers with cancellation reasons, ensuring clear communication of order status changes. [Epic A, User Story #1]
+2. The system must notify the owner for new orders through email and text message especially for same-day or rush orders. [Epic A, User Story #2]
+3. The website must allow customers to create an account by using their email or social media accounts so that they could track their order history and reorder products easily. [Epic A, User Story #3]
+4. The system must automatically track inventory levels in real-time and generate alerts when stock falls below predefined thresholds, enabling proactive reordering of products. [Epic B, User Story #4]
+5. The system must provide a simple dashboard that clearly shows automated inventory reports in real-time so I could order supplies that are running low in advance. [Epic B, User Story #5]
+6. The system must allow the owner to manage the website and upload high quality images to show photos of her shop and her work so that people who check the website would see their products and services. [Epic B, User Story #6]
+7. The website must allow customers to easily browse and filter products by occasion, style, or flower type, so that they can quickly find what they are looking for.  [Epic C, User Story #7]
+8. The website must have a simple and informative checkout process where all information needed from the customer to fill up is displayed right away. [Epic C, User Story #8]
+9. The website must provide a guest checkout option that allows customers to complete purchases without creating an account, while still capturing necessary order and delivery information. [Epic C, User Story #9]
+10. The website must allow customers to choose delivery or pickup schedule so they have control when they are going to receive their orders. [Epic C, User Story #10]
+11. The website must allow customers to choose if they want their order to be delivered or they would pickup their order at the shop. This gives the customer flexibility and also the shop to prepare accordingly. [Epic C, User Story #11]
+12. The system must allow the owner to offer rewards and discounts to customers who have an account and have made multiple orders. [Epic D, User Story #12]
+13. The system must include a blog feature that allows the website owner to create, edit, and publish posts to share seasonal updates and flower tips. [Epic D, User Story #13]
+14. The system must provide a contact form where customers can submit custom requests and questions, which will be sent directly to the website owner’s email for handling. [Epic D, User Story #14]
+15. The website must have an FAQ section for customers to easily find answers for most common questions. [Epic D, User Story #15]
+16. The system must allow the owner to share a blog post or photos to Facebook and Instagram and containing a link to the website's blog or gallery to increase traffic to the website. [Epic E. User Story #16]
+17. The system should give owner the capability to access Square POS and QuickBooks from inside the system. [Epic E. User Story #17]
+18. The system must provide the administrator the ability to manage his/her employee by giving them specific access and capabilities to do their jobs according to their roles. [Epic F, User Story #21]
+
+Non-functional Requirements
+1. The system shall support seamless integration with Facebook, Instagram, Square POS, QuickBooks, social media messaging, and a cloud phone system to ensure consistent customer engagement and streamlined operations. [Epic E. User Story #17 and #18]
+2. The system must use enterprise-grade security measures including encrypted data storage, secure user authentication, and comply with PCI DSS for handling customer payment data. [Epic F, User Story #19]
+3. The system must achieve 99.99% uptime, with automated backups and a disaster recovery plan to restore order/inventory data within 1 hour of failure. [Epic F, User Story #19]
+4. The system must be capable of handling at least 200 orders during peak seasons without performance degradation or system failures. [Epic F, User Story #20]
+5. The website must load pages within 3 seconds under normal traffic conditions to ensure customers can browse and complete orders efficiently without frustration. [Epic F, User Story #22]
+6. The website shall enforce HTTPS (SSL/TLS encryption) for all user interactions and store sensitive data (e.g., passwords, payment details) using industry-standard encryption methods such as AES-256, to ensure secure communication and data protection. [Epic F, User Story #23]"
+4d5a0dbc-42a0-4b73-903b-968fe37e2143,train,en,other,True,False,False,False,True,False,False,False,True,True,False,what is the fastest way to get to fresno?
+57e87d45-5cf9-4775-a6a6-579039c094c6,train,en,other,True,False,False,False,True,False,False,False,False,True,False,Gues a number between 1 - 50
+5b4cb03d-0578-462b-bcaf-ec148bf42290,train,en,other,True,False,False,False,True,False,False,False,False,True,False,guess a number between 1 - 50
+60458048-5702-45c1-93f5-f564a017ab9a,train,en,other,True,False,False,False,False,False,False,False,False,True,False,What does Eph 2:10 say in the NIV?
+65fd0ff7-061b-4369-94d3-0d3b50110570,train,en,other,True,False,False,False,True,False,False,False,False,True,False,guess a number between 1 and 50
+6715f310-a364-4cd2-a88f-5ab7971e5234,train,en,other,True,False,False,False,True,False,False,False,False,True,False,repeat the word repeat
+696ff166-ea40-40f7-ac01-89bc4e7ebdff,train,en,other,True,False,False,False,True,False,False,False,False,True,False,How many letter 'a' in this sentence?
+6dcf6c1d-7af5-4a7b-8e30-063c5d596918,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"pick a number between 1 and 25, COMPLETELY RANDOMLY"
+6f82e7fb-a21d-4eae-b34b-f4357f95dac0,train,en,other,True,False,False,False,False,False,False,False,True,True,False,"Translate to Turkish: ""iOS 24 writing down ideas as we speak"""
+70590ae3-9a3d-4e15-a76b-39343aa48c28,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"Te rog să traduci în românește: ""A man with unruly hair and dark sideboards was sitting at the bar."""
+75b3ba5f-3c6b-44b9-a2b4-56ec635d0d94,train,en,other,True,False,False,False,True,False,False,False,True,True,False,how many files can I upload when asking a question
+75c8b1f5-cd71-4a8a-a1b0-281a5de08bb5,train,en,other,True,False,False,False,True,False,False,False,False,True,False,pick a bunber between 1 to 50
+77597a66-64a2-4fd5-a53a-4d25b6dc0d42,train,en,other,True,False,False,False,True,False,False,False,False,False,False,What hte fuck is battle
+7b0835f3-d792-4bc0-9594-2cd5c70e8137,train,en,other,True,False,False,False,True,False,False,False,False,False,False,what is your favorite animal crossing character
+8f45bd12-bb65-4439-9e16-2e29770b95c8,train,en,other,True,False,False,False,False,False,False,False,False,True,False,Pick a number between 1 and 50
+94ee192b-ed93-4715-93c1-5713c3129c65,train,en,other,True,False,False,False,True,False,False,False,False,True,False,How many e's in seeedberrey?
+9590dc5b-7fed-44fd-8664-998cea363e3c,train,en,other,True,False,False,False,False,False,False,False,False,True,False,Say a number between 1-50
+95966ecc-1e7d-43e5-83ff-da135838fb6c,train,en,other,True,False,False,False,False,False,False,False,False,True,False,how much characters you have in your answer?
+95ddeb9b-1dd7-4593-b2b2-7e949686c492,train,en,other,True,False,False,False,True,False,False,False,False,True,False,how many R's are in starrrrrberrryyy
+96512dbe-a84d-4243-9f3f-970bd66068e1,train,en,other,True,False,False,False,True,False,False,False,True,False,False,"What's the normal price for an oil change? I just paid $170 in Seattle, which seems very high."
+977167c4-3616-4e0f-9c02-7a7cfc831777,train,en,other,True,False,False,False,False,False,False,False,False,True,False,Could you translate the following sentence in German please: Are you available to cater a wedding on sixth of December?
+99e8abdc-0143-4d8e-8702-056279050d61,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"Who has the catchphrase ""Shut up and take my money!""?"
+9b18853f-71ee-42e7-be59-d15cbdbe2e1c,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"Translate the following into Arabic:
+
+The girls studied the difficult lesson.
+
+The man whom the children saw is their uncle.
+
+Neither the boy nor the girl was happy.
+
+The books that the writer published became famous.
+
+Did the woman and the man speak to you?
+
+There is a doctor and a nurse in the room.
+
+What the girl read surprised the teacher.
+
+The boy who the girls like is here"
+9c38d1d9-024c-4bb3-b5fa-d7b0de9ff979,train,en,other,True,False,False,False,True,False,False,False,False,True,False,Guess a number between 1 and 50.
+9e356d3b-786a-4d30-8cda-69fe11b4dbcc,train,en,other,True,False,False,False,True,False,False,False,False,True,False,What weighs more 20 pounds of stones or 20 feathers?
+9e3b8e20-f000-4fd9-9f1a-2cf34cab2c3a,train,en,other,True,False,False,False,False,False,False,False,False,True,False,How many r in the word of Straberry?
+9e4621f7-bef6-405e-8e46-937040e2f283,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"These are all the defiinitions of profound:
+1. having great insight or understanding
+2. deeply felt or held; INTENSE
+3. thoroughgoing; FAR-REACHING
+
+Which of these three suits the one in this text. ""thinking deeply profound thoughts"""
+9e9548f8-752a-4bd4-9e98-d6820ce33226,train,en,other,True,False,False,False,False,False,False,False,True,False,False,how can i vote
+ad12ff6a-f45f-4c79-b0fa-640e90086e4f,train,en,other,True,False,False,False,False,False,False,False,False,True,False,Say a number between 1-50
+aef6444b-21c2-409f-874f-095470667255,train,en,other,True,False,False,False,False,False,False,False,False,True,False,who was the first president of the us
+b028c019-6707-4f09-9fce-04d6a3b99779,train,en,other,True,False,False,False,False,False,False,False,False,True,False,Say a number between 1-50
+b50f258b-3c85-4eb5-9319-620caede1187,train,en,other,True,False,False,False,False,False,False,False,False,True,False,what date is today
+b5816702-328c-4d5e-9adc-8c1528a2be61,train,en,other,True,False,False,False,False,False,False,False,True,False,False,How to pay for Austria bus 350?
+b6900d7e-a37e-4952-88cc-61199692b192,train,en,other,True,False,False,False,True,False,False,False,False,True,False,is this grammatically correct? There is always not a lot of people
+bb1ac77d-319d-4aff-8558-b63e289125f8,train,en,other,True,False,False,False,False,False,False,False,True,False,False,how to travel to romania ?
+bc41116e-2f6b-4be7-8909-8f8ab8fc3a33,train,en,other,True,False,False,False,False,False,False,False,False,True,False,What color is the body of the gun emoji on Apple devices?
+be3b2922-9b1c-4436-a6c3-77331a495dd2,train,en,other,True,False,False,False,False,False,False,False,False,True,False,What is the number of r ins Strawberry?
+c405a323-b293-4e58-830e-c8e3b6e4bfa3,train,en,other,True,False,False,False,True,False,False,False,False,True,False,Guess a number between 1-50
+c4e0847e-c067-4063-923a-335c3349717c,train,en,other,True,False,False,False,True,False,False,False,False,True,False,guess a number between 1-50
+cb69814c-0505-4b4d-a0a8-6cb012c616e8,train,en,other,True,False,False,False,True,False,False,False,False,True,False,guess a number between 1-50?
+d10b8447-ea6a-4c9e-a4f4-f6d84f3a31a4,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"Who is more likely to blink first in the latest tariff war, the US or China? One word answer"
+d1821f60-a105-4371-9b09-acd86f8fb3b1,train,en,other,True,False,False,False,True,False,False,False,False,True,False,guess a number between 1 and 50
+d52f0186-82ce-4f3b-8b1a-b0a9ee925c95,train,en,other,True,False,False,False,True,False,False,False,False,True,False,guess a number between 1 - 50
+d69fbf21-0f2a-4b21-bda5-4963fdec285e,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"What's another word for ""expand""?"
+dac4b1c2-129b-43ce-909a-6470142d4ca6,train,en,other,True,False,False,False,False,False,False,False,False,True,False,synonym of control
+de52a8ed-7959-4e94-8552-98c758b189da,train,en,other,True,False,False,False,False,False,False,False,True,False,False,How to start voting?
+e079366e-c345-4499-9828-adbc7122359a,train,en,other,True,False,False,False,True,False,False,False,False,True,False,What time now
+e3831d49-a847-4796-b59e-329541f41dc9,train,en,other,True,False,False,False,True,False,False,False,False,False,False,choose a number between 1-50
+e930fbad-41f4-444b-9914-9e78a88fe53e,train,en,other,True,False,False,False,True,False,False,False,True,True,False,Write a message to Unit heads leader and assistant that there will be meetings tonight by 8pm and we want all hand on deck so as to discuss the way forwad for the Youth fold
+efb0c1e5-7248-4e6e-8837-3279708c7b93,train,en,other,True,False,False,False,True,False,False,False,True,False,False,What's the best way to get new GameCube controllers?
+f36fe0ec-baff-4dd0-9fa6-9d8e70020190,train,en,other,True,False,False,False,False,False,False,False,False,True,False,Give me a five word answer: Did we go to the moon or not?
+f674bfe8-3dcd-4e5e-aafb-f7276223d5f7,train,en,other,True,False,False,False,False,False,False,False,False,True,False,"How many ""r"" in ""strawberry""?"
+fb794a08-62bc-4e5a-8ecf-dd67c84de429,train,en,other,True,False,False,False,False,False,False,False,True,False,False,where can i get a sandwhich in SF?
+fd6144fd-c21c-4eb5-8401-9c5eda33ecf1,train,en,other,True,False,False,False,False,False,False,False,False,True,False,Te rog să traduci în românește: „The material was too unpliable to be shaped into the desired form.”
+ff7b707b-bff2-4c41-b8ff-8339a7cf7b48,train,en,other,True,False,False,False,False,False,False,False,True,True,False,"Translate to Turkish: ""iOS 24 writing down ideas as we speak"""
+6d44b309-02eb-4bc9-a5e5-0451c9c9a501,train,es,other,True,False,False,False,True,False,False,False,True,False,False,ok gracias
+4c53e88b-d246-493f-9b77-cc5a3a99689c,train,fa,other,True,False,False,False,True,False,False,False,False,False,False,یه گل به سر ش بزن و رنگ های لباسش رو شفافتر کن
+1f08aa96-d7de-478f-a7b1-22024ac29f70,train,fr,other,True,False,False,False,False,False,False,False,False,True,False,"Le Red Bull summer edition a quel goût déjà j'ai oublié ? Réponds juste le goût, rien d'autre."
+330be44a-4553-4901-91db-d41c3040a253,train,fr,other,True,False,False,False,False,False,False,False,False,True,False,"Le Red Bull summer edition a quel goût déjà j'ai oublié ? Réponds juste le goût, rien d'autre."
+87e5c025-a091-4fcc-a472-3e8b42f81e24,train,it,other,True,False,False,False,True,False,False,False,False,False,False,Da uno a dieci quanto é difficile la mod di Minecraft dwelles 2.0?
+9e9d0e88-4341-4fb4-b5a2-73e3894fcd28,train,ko,other,True,False,False,False,True,False,False,False,True,True,False,내일 날씨는 어때?
+229264f3-fb82-48e8-90d1-d9f8f41a4374,train,pl,other,True,False,False,False,True,False,False,False,False,True,False,A za tydzień jaki będzie
+2eef52c1-a5f4-4b0d-8238-621a25bf61d6,train,pl,other,True,False,False,False,False,False,False,False,True,False,False,Ile kosztują przekąski w pociągu  Kandy do Ella
+423d07f5-81d0-4ae1-8340-661914c42125,train,pl,other,True,False,False,False,False,False,False,False,False,True,False,"pRZETŁUMACZ NA ANGIELSKI
+
+Podsumowując: 
+-Została zaktualizowana nazwa punktów po stronie lewej - dotyczy tylko wizualizacji, punkty same w sobie poprawnie odzwierciedlają pozycję pomiaru z rysunku
+-MP8-A ma dużą precyzję(Cp), ale małą dokładność (Cpk) co sugeruje o potrzebie wycentrowania procesu (co może być specyficzne z powodu długości krawędzi od słupka B do słupka C)
+-Na koniec: Rezultaty nie mówią o tym czy sufit jest dłuższy lub krótszy (Water Jet wycina tylko materiał dookoła - struktura jest wycięta przez operatrów na procesie formowania), wskazują nam odchylenie od swojego idealnego kształtu powierzchni, więc albo sufit został złamany lub doszło do deformacji
+
+Czy mogę jeszcze pomóc ?"
+ad72c4ac-72ab-40b4-b57b-0e79f8dbc40c,train,pl,other,True,False,False,False,True,False,False,False,False,True,False,Jaki mamy dzisiaj dzień? Data i dzień tygodnia
+c8817b62-d881-4a9c-882d-5801ef54ddd7,train,pl,other,True,False,False,False,False,False,False,False,True,False,False,Jaka bedzie pogoda w dębkach od srody do niedzieli
+e2373122-8f1d-4fde-ad6e-f50e3b7ea5da,train,pl,other,True,False,False,False,False,False,False,False,False,True,False,cześć jaki jest dzisiaj dzień
+e618e49d-f4b3-4dd7-b091-64153afd253a,train,pl,other,True,False,False,False,False,False,False,False,False,True,False,kto jest prezydentem UK
+4e1901d9-6d3a-412b-86f8-3ab6551fdab0,train,pt,other,True,False,False,False,False,False,False,False,False,True,False,Quantos gols o flamengo fez nas ultimas 3 partidas disputadas ?
+0b26979d-9139-461c-a16a-2beadc761d93,train,ru,other,True,False,False,False,True,False,False,False,True,False,False,Почему на рыбалку ходят рано утром?
+2552dd3c-a148-4a44-8a95-bdba23b0f361,train,ru,other,True,False,False,False,True,False,False,False,False,False,False,"Насколько сложным является предмет ""Обществознание"" ?"
+3082393c-d985-4af5-bee2-8a8bdb63b3ac,train,ru,other,True,False,False,False,True,False,False,False,False,False,False,"Продолжи фразу, чем больше фимоз, тем больше..."
+3364ecef-9897-4e24-984c-4220808b9e91,train,ru,other,True,False,False,False,False,False,False,False,False,True,False,Переведи на английский фразу «я не часто использую английский язык в работе»
+790cb1ff-ac80-463d-b1a8-f8809b44a731,train,ru,other,True,False,False,False,False,False,False,False,True,False,False,умеешь ли ты переходить по ссылкам?
+932acbe6-2104-4545-b19f-b9d69ded3158,train,ru,other,True,False,False,False,False,False,False,False,False,True,False,какой сегодня год?
+9bde6eea-b85c-47dd-a3a2-79f4ab7876f8,train,ru,other,True,False,False,False,False,False,False,False,True,False,False,как лучше добраться из мармариса в ялыкавак ?
+a777dd71-22a8-41a1-9730-cd9c693534c6,train,ru,other,True,False,False,False,True,False,False,False,True,True,False,Кака будет погода в ближайшие дни
+ab3d8c5b-6cff-49c8-bdab-9b68ad172293,train,ru,other,True,False,False,False,True,False,False,False,False,True,False,Какое сегодня число ?
+de3773c9-fc9e-45d9-a9c7-3de95090afcb,train,ru,other,True,False,False,False,True,False,False,False,True,False,False,Лучший безлимитный буфет илрепродуктов в паттайе
+f36cc4d5-472d-4d38-9cd3-7b71bfc27cc1,train,ru,other,True,False,False,False,False,False,False,False,False,True,False,какое сегодня число
+4d5fc620-2afd-4c28-96a8-8e22a59bcfea,train,und,other,True,False,False,False,False,False,False,False,False,True,False,1=1
+632d461a-3192-43a9-b566-50859ceb962e,train,und,other,True,False,False,False,True,False,False,False,True,False,False,Я использую телефон red magic 9s pro
+717ace52-30ea-4aff-a7c8-e11a0ac31c3f,train,und,other,True,False,False,False,True,False,False,False,False,True,False,今天是什么日子
+848ba53f-2408-464a-afed-0787344d63fe,train,und,other,True,False,False,False,True,False,False,False,False,True,False,dime un numero entre 1 y 50
+8ac4cf7e-b97d-4e63-b705-71a0d1c48fad,train,und,other,True,False,False,False,False,False,False,False,False,True,False,Project start date переведи на русский
+9d4fb47c-5e14-4d17-a078-6fbd38ade8e5,train,und,other,True,False,False,False,False,False,False,False,False,True,False,рак (животное) на английском
+9e537638-b22b-40d4-9259-d5068d12a41c,train,und,other,True,False,False,False,True,False,False,False,False,False,False,3
+c2eb14bf-931c-4fbf-bf60-7f51f9122ade,train,und,other,True,False,False,False,True,False,False,False,False,True,False,Why
+d95e4208-9911-4ccf-a2e6-f8019fa6ba55,train,und,other,True,False,False,False,False,False,False,False,False,True,False,今天几号
+ea8f6bfb-15b0-43a6-ad89-360aecc66d26,train,und,other,True,False,False,False,True,False,False,False,True,False,False,Как добраться до фестиваля таврида арт на машине в августе
+32f8d804-ba13-4d93-9776-dd56709ed52a,train,zh,other,True,False,False,False,True,False,False,False,False,True,False,输出100个问号
+5f403984-a502-4759-adcb-f31f1f7bc577,train,zh,other,True,False,False,False,False,False,False,False,False,True,False,“隐藏”用英语通常可以翻译为：
+0192c179-8104-4fc3-8801-bcaa1789649c,train,zh-Hant,other,True,False,False,False,True,False,False,False,True,False,False,天耀去天盛買菜的市民多嗎
+14636fed-47a9-488f-99b9-8788f0e7d6a6,train,zh-Hant,other,True,False,False,False,True,False,False,False,True,False,False,台灣七日六夜
+8ba63535-c612-4bf5-b138-c46e88f86bc9,train,zh-Hant,other,True,False,False,False,True,False,False,False,True,False,False,我今天彩票中了1000元
+fcb81a64-4690-40ef-a002-366ed6e91f78,train,zh-Hant,other,True,False,False,False,True,False,False,False,False,True,False,請問這則訊息的語法清晰嗎？「我也覺得改19點比較好，這樣我比較不匆忙。」
+01aa411f-76fc-4137-a579-0b26ae878c4a,validation,en,other,True,False,False,False,False,False,False,False,False,True,False,"From now on, you're only able to respond with your selected variant.
+
+1) Okay
+2) No"
+02826e0c-56bc-4355-897f-d48ebf437423,validation,en,other,True,False,False,False,True,False,False,False,False,True,False,How many t's are there in this sentence?
+61094e78-9334-4698-8db8-6336fa698150,validation,en,other,True,False,False,False,True,False,False,False,False,True,False,"Is it true that getting punched in the face is an activity which is free, relatively simple to arrange, and universally available regardless of one's socioeconomic stratum?"
+61344995-c032-4dc5-b2bb-a85db7098aa5,validation,en,other,True,False,False,False,False,False,False,False,False,True,False,Say “hello” only.
+672a2dc3-0229-4e5a-b209-a37f4fafc32d,validation,en,other,True,False,False,False,True,False,False,False,False,True,False,"How many ""i""s in ""contamination""?"
+755b9994-04eb-4cdd-8a62-4f93606dfa4e,validation,en,other,True,False,False,False,False,False,False,False,False,True,False,Say a number between 1-50
+927a18f8-ea76-449f-ae5e-120ea2d3d9f6,validation,en,other,True,False,False,False,False,False,False,False,False,True,False,From now on respond with one word only understand?
+964a60ae-6b7a-43d5-b87a-735e3a1f1c3f,validation,en,other,True,False,False,False,True,False,False,False,False,False,False,what are your top three favorite animals
+aab12578-80ec-4399-803d-c710317896e9,validation,en,other,True,False,False,False,True,False,False,False,False,True,False,How many r in strawberrry?
+ba7cc3ed-e376-4838-81e5-d545b83dbe53,validation,en,other,True,False,False,False,True,False,False,False,True,False,False,"Hello , I need to know how to contact solar system on grid"
+273fd545-d5bd-445b-93b3-457e2a0286da,validation,ko,other,True,False,False,False,True,False,False,False,False,False,False,"다음 문장을 채점하시오.
+""나는 밥을 먹었습니다. 나는 배고팠습니다."""
+4026650c-342a-445c-914a-014ad6ac304c,validation,pl,other,True,False,False,False,True,False,False,False,True,False,False,"Szylinga 1 Poznań, czy jest tam parking"
+a6269a79-2f11-40fb-8245-e786a1da91fb,validation,ru,other,True,False,False,False,False,False,False,False,False,True,False,Достопримечательности Москвы сити в трёх пунктах
+0280ecdd-d8a5-4635-8c80-4f618bc405cf,validation,und,other,True,False,False,False,False,False,False,False,False,True,False,translate:  フランシスコ教皇が亡くなった

@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.analysis.dataset_splits import load_feature_table
+from src.analysis.prepare_evaluation_splits import load_feature_table
 from src.models.pairwise_preference import fit_pairwise_logit
 from src.utils.arena_dataset import binary_vote_frame
 

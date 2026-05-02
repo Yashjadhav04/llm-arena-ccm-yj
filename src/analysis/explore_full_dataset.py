@@ -286,9 +286,14 @@ def main() -> None:
         help="Repository root containing data/, src/, docs/, and results/ directories.",
     )
     parser.add_argument(
+        "--output-dir",
+        default="results/full data eda",
+        help="Directory for EDA report and supporting CSV tables.",
+    )
+    parser.add_argument(
         "--output-markdown",
-        default="results/full_dataset_eda.md",
-        help="Markdown report output path.",
+        default=None,
+        help="Optional markdown report path. Defaults to output-dir/full_dataset_eda.md.",
     )
     parser.add_argument(
         "--limit",
@@ -362,7 +367,7 @@ def main() -> None:
     winner_by_code = _winner_by_group(flat, "is_code")
     length_diff_by_winner, binary_winner_given_longer = _length_outcome_tables(flat)
 
-    results_dir = (repo_root / "results").resolve()
+    results_dir = (repo_root / args.output_dir).resolve()
     results_dir.mkdir(parents=True, exist_ok=True)
 
     feature_cardinality.to_csv(results_dir / "eda_feature_cardinality.csv", index=False)
@@ -405,13 +410,16 @@ def main() -> None:
         binary_winner_given_longer=binary_winner_given_longer,
     )
 
-    report_path = (repo_root / args.output_markdown).resolve()
+    if args.output_markdown is None:
+        report_path = results_dir / "full_dataset_eda.md"
+    else:
+        report_path = (repo_root / args.output_markdown).resolve()
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(report, encoding="utf-8")
 
     print(f"Wrote processed features to: {processed_path}")
     print(f"Wrote EDA report to: {report_path}")
-    print("Saved supporting CSV tables to results/.")
+    print(f"Saved supporting CSV tables to: {results_dir}")
 
 
 if __name__ == "__main__":
